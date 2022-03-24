@@ -6,6 +6,10 @@ package reutilizacioncodigo2209;
 
 import asus.com.Computadora;
 import ico.fes.componentes.Mouse;
+import ico.fes.herencia.Alumno;
+import ico.fes.herencia.Servidor;
+import ico.fes.herencia.polimorfismo.Animal;
+import ico.fes.herencia.polimorfismo.Perro;
 import javax.swing.JFrame;
 
 /**
@@ -48,6 +52,45 @@ public class ReutilizacionCodigo2209 {
         compu2.setRaton(new Mouse("apple", "Touch"));
         compu2.setRaton(),setTipo("Touch");
         System.out.println(compu2);
+        
+        
+        System.out.println("----------------------------");
+        Alumno.alu1=new Alumno();
+        alu1.setNombre("Jose");
+        System.out.println("alu1");
+        
+        Alumno alu2=new Alumno ("12345678", "ICO", "Jose Perez",19);
+        System.out.println("alu2");
+        
+        
+        alu1.setNumerocuenta("123456");
+        alu1.setedad(19);
+        System.out.println("alu1");
+        
+        
+        System.out.println("------------Composicion y Herencia en la misma clase------");
+        Servidor server=new Servidor();
+        System.out.println("server");
+        server.setNumeroTarjetasRed(2);
+        System.out.println("server");
+        server.setMarca("HP");
+        System.out.println("server");
+        server.setRaton(new Mouse("LG")"Optico");
+        System.out.println("server");
+        server.getRaton().setMarca("Logitech");
+        System.out.println("server");
+        
+        
+        System.out.println("------Ejemplo Polimorfismo------");
+        Perro dog=new Perro("BUll Dog", "5 estrellas", 4);
+        Animal animal1=new Animal(4);
+        dog.emitirSonido();
+        animal1.emitirSonido();
+        
+        
+    
+                
+        
         
         
     }
